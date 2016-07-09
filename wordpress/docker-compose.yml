@@ -1,0 +1,23 @@
+version: '2'
+services:
+  wordpress:
+    image: wordpress:4.5.3
+    environment:
+      - WORDPRESS_DB_PASSWORD=password
+      - WORDPRESS_AUTH_KEY=changeme
+      - WORDPRESS_SECURE_AUTH_KEY=changeme
+      - WORDPRESS_LOGGED_IN_KEY=changeme
+      - WORDPRESS_NONCE_KEY=changeme
+      - WORDPRESS_AUTH_SALT=changeme
+      - WORDPRESS_SECURE_AUTH_SALT=changeme
+      - WORDPRESS_LOGGED_IN_SALT=changeme
+      - WORDPRESS_NONCE_SALT=changeme
+      - WORDPRESS_NONCE_AA=changeme
+    ports:
+      - 80:80
+    restart: always
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+    restart: always

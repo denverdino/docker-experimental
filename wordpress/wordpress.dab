@@ -1,0 +1,38 @@
+{
+  "Services": {
+    "mysql": {
+      "Env": [
+        "MYSQL_ROOT_PASSWORD=password"
+      ], 
+      "Image": "mysql@sha256:339f16cc6593bcae73124f3c614234616a11746c2f38596549526ce85f0b58a8", 
+      "Networks": [
+        "default"
+      ]
+    }, 
+    "wordpress": {
+      "Env": [
+        "WORDPRESS_AUTH_SALT=changeme", 
+        "WORDPRESS_LOGGED_IN_KEY=changeme", 
+        "WORDPRESS_AUTH_KEY=changeme", 
+        "WORDPRESS_NONCE_AA=changeme", 
+        "WORDPRESS_SECURE_AUTH_SALT=changeme", 
+        "WORDPRESS_NONCE_KEY=changeme", 
+        "WORDPRESS_DB_PASSWORD=password", 
+        "WORDPRESS_LOGGED_IN_SALT=changeme", 
+        "WORDPRESS_NONCE_SALT=changeme", 
+        "WORDPRESS_SECURE_AUTH_KEY=changeme"
+      ], 
+      "Image": "wordpress@sha256:7bb9549fb6d80c230bec2da6bd181be8f30e5199687e53e5ad5744a3144eae1b", 
+      "Networks": [
+        "default"
+      ], 
+      "Ports": [
+        {
+          "Port": 80, 
+          "Protocol": "tcp"
+        }
+      ]
+    }
+  }, 
+  "Version": "0.1"
+}
