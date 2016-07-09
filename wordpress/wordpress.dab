@@ -4,7 +4,7 @@
       "Env": [
         "MYSQL_ROOT_PASSWORD=password"
       ], 
-      "Image": "mysql@sha256:339f16cc6593bcae73124f3c614234616a11746c2f38596549526ce85f0b58a8", 
+      "Image": "mysql@sha256:a9a5b559f8821fe73d58c3606c812d1c044868d42c63817fa5125fd9d8b7b539", 
       "Networks": [
         "default"
       ]
